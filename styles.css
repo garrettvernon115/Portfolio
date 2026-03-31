@@ -215,43 +215,79 @@ body {
 
 /* About Section */
 .about {
+
     padding: 196px 145.5px;
+
     background: #FFFFFF;
+
 }
+
+
 
 .about-content {
+
     display: flex;
+
     gap: 48px;
+
     max-width: 1297px;
-    align-items: flex-start; 
+
 }
+
+
 
 .about-text {
-    width: 450px; /* Lowering this from 552px makes the lines shorter */
+
+    width: 552px;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 24px;
+
 }
+
+
+
 .about-text h2 {
+
     font-size: 16px;
+
     font-weight: 700;
+
     line-height: 1.5;
+
     color: #0F172B;
+
 }
+
+
 
 .about-text p {
+
     font-size: 16px;
+
     font-weight: 700;
+
     line-height: 1.5;
+
     color: #45556C;
+
 }
 
+
+
 .about-technologies {
+
     width: 552px;
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 24px;
-    flex-shrink: 0; /* This strictly prevents the browser from squishing the icons */
+
 }
 
 .tech-item {
