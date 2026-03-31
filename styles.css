@@ -237,15 +237,10 @@ body {
 
 
 .about-text {
-
-    width: 552px;
-
+    width: 450px; /* This makes the text lines shorter so it doesn't push the icons */
     display: flex;
-
     flex-direction: column;
-
     gap: 24px;
-
 }
 
 
@@ -279,15 +274,11 @@ body {
 
 
 .about-technologies {
-
-    width: 552px;
-
+    width: 552px; /* Keeps your icon grid the exact size it needs to be */
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 24px;
-
+    flex-shrink: 0; /* This is the magic rule! It stops the text from squishing your icons */
 }
 
 .tech-item {
