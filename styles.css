@@ -227,7 +227,7 @@ body {
 }
 
 .about-text {
-    flex: 1; 
+    width: 450px; /* Lowering this from 552px makes the lines shorter */
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -247,11 +247,11 @@ body {
 }
 
 .about-technologies {
-    flex: 1; /* Replaces width: 552px */
-    min-width: 400px; /* Prevents the grid from squishing on medium-sized screens */
+    width: 552px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    flex-shrink: 0; /* This strictly prevents the browser from squishing the icons */
 }
 
 .tech-item {
