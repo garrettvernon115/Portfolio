@@ -123,6 +123,14 @@ body {
     margin-bottom: 40px;
 }
 
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #45556C;
+    margin-bottom: 40px;
+}
+
 .hero-buttons-container {
     display: flex;
     flex-direction: column;
