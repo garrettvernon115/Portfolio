@@ -103,17 +103,6 @@ body {
     position: relative;
 }
 
-.hero-badge {
-    display: inline-block;
-    background: #0F172B;
-    color: #FFFFFF;
-    padding: 9px 16px;
-    border-radius: 335px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.5;
-    margin-bottom: 48px;
-}
 
 .hero-heading {
     font-size: 48px;
@@ -241,15 +230,15 @@ body {
 }
 
 .about-text h2 {
-    font-size: 16px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1.11;
     color: #0F172B;
 }
 
 .about-text p {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.5;
     color: #45556C;
 }
@@ -315,7 +304,7 @@ body {
 
 .projects-header p {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.5;
     color: #45556C;
     max-width: 672px;
@@ -355,26 +344,6 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-.project-image {
-    width: 100%;
-    height: 313.88px;
-    background: #FFFFFF;
-    overflow: hidden;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
-
-.project-arrow {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    display: block;
-}
 
 .project-content {
     padding: 24px;
@@ -399,7 +368,7 @@ body {
 
 .project-content p {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.5;
     color: #717182;
 }
@@ -472,9 +441,9 @@ body {
 }
 
 .skills h2 {
-    font-size: 16px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1.11;
     color: #0F172B;
     text-align: center;
     margin-bottom: 64px;
@@ -521,6 +490,71 @@ body {
     text-align: center;
 }
 
+/* Resume Section */
+.resume {
+    background-color: #F8FAFC;
+    padding: 96px 145.5px;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.resume-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    color: #0F172B;
+    margin-bottom: 16px;
+}
+
+.resume-header p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #45556C;
+    line-height: 1.5;
+}
+
+.resume-preview-wrapper {
+    max-width: 860px;
+    margin: 0 auto 40px;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.resume-iframe {
+    width: 100%;
+    height: 780px;
+    border: none;
+    display: block;
+}
+
+.resume-actions {
+    text-align: center;
+}
+
+.download-resume-btn {
+    display: inline-block;
+    background-color: #030213;
+    color: #FFFFFF;
+    padding: 0 24px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Manuale', serif;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.download-resume-btn:hover {
+    opacity: 0.9;
+}
+
 /* Contact Section */
 .contact {
     background: #F8FAFC;
@@ -535,16 +569,16 @@ body {
 }
 
 .contact-header h2 {
-    font-size: 16px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1.11;
     color: #0F172B;
     margin-bottom: 16px;
 }
 
 .contact-header p {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.5;
     color: #45556C;
 }
@@ -569,7 +603,7 @@ body {
     border-radius: 8px;
     font-family: 'Manuale', serif;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.43;
     color: #717182;
     width: 100%;
@@ -584,7 +618,7 @@ body {
     resize: vertical;
     min-height: 100px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.43;
 }
 
@@ -735,6 +769,7 @@ body {
     .about,
     .projects,
     .skills,
+    .resume,
     .contact,
     .footer {
         max-width: 100%;
@@ -754,6 +789,10 @@ body {
     .contact-form,
     .contact-info {
         width: 100%;
+    }
+
+    .resume-iframe {
+        height: 560px;
     }
 
     .projects-grid {
