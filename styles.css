@@ -527,7 +527,7 @@ body {
 
 .resume-iframe {
     width: 100%;
-    height: 780px;
+    height: 1100px;
     border: none;
     display: block;
 }
@@ -792,7 +792,7 @@ body {
     }
 
     .resume-iframe {
-        height: 560px;
+        height: 860px;
     }
 
     .projects-grid {
