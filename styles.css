@@ -116,7 +116,7 @@ body {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.5;
-    color: #45556C;
+    color: #2563EB;
     margin-bottom: 40px;
 }
 
@@ -349,7 +349,7 @@ body {
     padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     flex: 1;
 }
 
@@ -366,11 +366,36 @@ body {
     color: #0A0A0A;
 }
 
-.project-content p {
-    font-size: 16px;
+.project-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #45556C;
+    font-style: italic;
+}
+
+.project-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0;
+}
+
+.project-bullets li {
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #717182;
+    padding-left: 16px;
+    position: relative;
+}
+
+.project-bullets li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #45556C;
 }
 
 .project-tags {
@@ -394,7 +419,7 @@ body {
 .project-buttons {
     display: flex;
     gap: 12px;
-    margin-top: 8px;
+    padding-top: 8px;
 }
 
 .project-btn {
