@@ -323,7 +323,7 @@ body {
     color: inherit;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     gap: 24px;
 }
 
@@ -350,7 +350,12 @@ body {
     border-radius: 14px;
     overflow: hidden;
     flex: 2.5;
+    aspect-ratio: 16 / 9;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-preview-card-wide {
+    aspect-ratio: 2 / 1;
 }
 
 .project-content {
