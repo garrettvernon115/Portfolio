@@ -182,6 +182,20 @@ a { text-decoration: none; color: inherit; }
 .r-doc .ln { height: 8px; border-radius: 4px; background: #eceef2; }
 .r-doc .ln.h { height: 11px; width: 38%; background: #dfe3ea; margin-top: 8px; }
 .r-doc .ln.s { width: 92%; } .r-doc .ln.m { width: 74%; } .r-doc .ln.x { width: 60%; }
+/* clickable PDF preview */
+.r-doc { display: block; padding: 0; border: 0; cursor: pointer; -webkit-appearance: none; appearance: none; transition: transform .25s ease, box-shadow .25s ease; }
+.r-doc:hover { transform: translateY(-4px); box-shadow: 0 38px 70px -24px rgba(15,23,43,.5), 0 0 0 1px rgba(246,181,60,.55); }
+.r-doc-frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; pointer-events: none; }
+.r-doc-cta { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 2; font-family: var(--sans); font-weight: 600; font-size: 13px; color: #1a1206; background: var(--amber); padding: 8px 16px; border-radius: 999px; box-shadow: 0 10px 26px -8px rgba(246,181,60,.75); opacity: 0; transition: opacity .2s ease, transform .2s ease; pointer-events: none; }
+.r-doc:hover .r-doc-cta, .r-doc:focus-visible .r-doc-cta { opacity: 1; transform: translateX(-50%) translateY(-3px); }
+
+/* resume lightbox */
+.resume-modal { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 4vh 4vw; background: rgba(6,8,10,.84); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.resume-modal.open { display: flex; }
+.resume-modal-doc { position: relative; width: min(900px, 100%); height: 92vh; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 40px 90px -30px rgba(0,0,0,.7); }
+.resume-modal-doc iframe { width: 100%; height: 100%; border: 0; }
+.resume-modal-close { position: absolute; top: 20px; right: 24px; z-index: 210; width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--amber); color: #1a1206; font-size: 28px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 28px -8px rgba(0,0,0,.6); transition: transform .15s ease; }
+.resume-modal-close:hover { transform: scale(1.06); }
 
 /* ===================== CONTACT (dark footage band) ===================== */
 .contact { position: relative; min-height: 600px; overflow: hidden; display: flex; }

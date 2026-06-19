@@ -221,19 +221,17 @@
         <a href="Garrett_Vernon_Resume_2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View Full</a>
       </div>
     </div>
-    <div class="r-doc" aria-hidden="true">
-      <div class="top">
-        <div class="nm">Garrett Vernon</div>
-        <div class="rl">Resume</div>
-      </div>
-      <div class="lines">
-        <div class="ln h"></div>
-        <div class="ln s"></div><div class="ln m"></div><div class="ln x"></div>
-        <div class="ln h"></div>
-        <div class="ln s"></div><div class="ln s"></div><div class="ln m"></div>
-        <div class="ln h"></div>
-        <div class="ln m"></div><div class="ln x"></div>
-      </div>
+    <button class="r-doc" id="resumePreview" type="button" aria-label="Enlarge resume preview">
+      <iframe class="r-doc-frame" src="Garrett_Vernon_Resume_2026.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Resume preview" tabindex="-1" aria-hidden="true"></iframe>
+      <span class="r-doc-cta">Click to enlarge</span>
+    </button>
+  </div>
+
+  <!-- Resume lightbox -->
+  <div class="resume-modal" id="resumeModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Resume preview">
+    <button class="resume-modal-close" id="resumeModalClose" type="button" aria-label="Close resume preview">&times;</button>
+    <div class="resume-modal-doc">
+      <iframe id="resumeModalFrame" title="Resume — full view"></iframe>
     </div>
   </div>
 </section>
@@ -324,6 +322,28 @@
     });
   }, { threshold: 0.2 });
   io.observe(cv);
+
+  // resume lightbox
+  const resumePreview = document.getElementById('resumePreview');
+  const resumeModal = document.getElementById('resumeModal');
+  const resumeModalFrame = document.getElementById('resumeModalFrame');
+  const resumeModalClose = document.getElementById('resumeModalClose');
+  const RESUME_SRC = 'Garrett_Vernon_Resume_2026.pdf#view=FitH';
+  const openResume = () => {
+    if (!resumeModalFrame.src) resumeModalFrame.src = RESUME_SRC;
+    resumeModal.classList.add('open');
+    resumeModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeResume = () => {
+    resumeModal.classList.remove('open');
+    resumeModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+  if (resumePreview) resumePreview.addEventListener('click', openResume);
+  if (resumeModalClose) resumeModalClose.addEventListener('click', closeResume);
+  if (resumeModal) resumeModal.addEventListener('click', (e) => { if (e.target === resumeModal) closeResume(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && resumeModal.classList.contains('open')) closeResume(); });
 </script>
 
 </body>
