@@ -160,6 +160,25 @@
     <div class="project flip">
       <div class="p-content">
         <div class="p-top"><span class="num">02</span><span class="tick"></span></div>
+        <h3>Provenance</h3>
+        <p class="desc">Question-answering system over SEC EDGAR filings that retrieves and re-ranks passages, then generates answers where every claim cites the exact source text.</p>
+        <ul>
+          <li>Built hybrid retrieval combining pgvector semantic search and BM25 full-text search, merged with Reciprocal Rank Fusion</li>
+          <li>Fine-tuned an in-house cross-encoder re-ranker and exported it to ONNX for deployment</li>
+          <li>Bootstrapped training data using an LLM, removing the need for manual labeling</li>
+          <li>Built an evaluation framework measuring answer faithfulness and citation accuracy</li>
+        </ul>
+        <div class="tags"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">ONNX</span><span class="chip">Docker</span></div>
+        <div class="acts"><a href="https://provenance-app-production-8792.up.railway.app" target="_blank" rel="noopener noreferrer" class="btn btn-amber">Live Demo</a><a href="https://github.com/garrettvernon115/provenance" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View Code</a></div>
+      </div>
+      <div class="p-media">
+        <a class="p-frame" href="https://provenance-app-production-8792.up.railway.app" target="_blank" rel="noopener" aria-label="Open Provenance live demo"><div class="bar"><i></i><i></i><i></i></div><img src="images/Provenance.png" alt="Provenance"><div class="glow"></div></a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="p-content">
+        <div class="p-top"><span class="num">03</span><span class="tick"></span></div>
         <h3>Luex</h3>
         <p class="desc">Cross-platform financial tracking application for desktop and Android with real-time cloud synchronization.</p>
         <ul>
@@ -176,9 +195,9 @@
       </div>
     </div>
 
-    <div class="project">
+    <div class="project flip">
       <div class="p-content">
-        <div class="p-top"><span class="num">03</span><span class="tick"></span></div>
+        <div class="p-top"><span class="num">04</span><span class="tick"></span></div>
         <h3>Cheevo</h3>
         <p class="desc">Full-stack Xbox achievement tracker that connects to a player's Xbox Live profile to surface games, completion progress, achievement rarity, and gamerscore in one place.</p>
         <ul>
@@ -195,9 +214,9 @@
       </div>
     </div>
 
-    <div class="project flip">
+    <div class="project">
       <div class="p-content">
-        <div class="p-top"><span class="num">04</span><span class="tick"></span></div>
+        <div class="p-top"><span class="num">05</span><span class="tick"></span></div>
         <h3>Ohio Unitization &amp; Drilling Units</h3>
         <p class="desc">Browser-based viewer for Ohio oil &amp; gas unitization boundaries and horizontal drilling units, sourced live from ODNR's public ArcGIS service.</p>
         <ul>
@@ -262,12 +281,12 @@
         </div>
       </div>
       <form class="c-form" onsubmit="return false">
-        <label class="fl">Your Name</label>
-        <input type="text" placeholder="Jane Doe">
-        <label class="fl">Your Email</label>
-        <input type="email" placeholder="jane@example.com">
-        <label class="fl">Your Message</label>
-        <textarea placeholder="Tell me about your project..."></textarea>
+        <label class="fl" for="cfName">Your Name</label>
+        <input type="text" id="cfName" name="name">
+        <label class="fl" for="cfEmail">Your Email</label>
+        <input type="email" id="cfEmail" name="email">
+        <label class="fl" for="cfMessage">Your Message</label>
+        <textarea id="cfMessage" name="message" placeholder="Tell me about your project..."></textarea>
         <button class="btn btn-amber">Send Message</button>
       </form>
     </div>
